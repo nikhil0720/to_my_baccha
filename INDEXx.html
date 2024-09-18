@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image on Button Click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        #imageContainer {
+            margin-top: 20px;
+        }
+        #myImage {
+            display: none; /* Hide the image initially */
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Show the Image</h1>
+
+    <button onclick="showImage()">Show Image</button>
+
+    <div id="imageContainer">
+        <img id="myImage" src="C:\Users\KIIT\Downloads\_0033d074-6c9c-495f-b833-7e8ac5780154.jpeg" alt="Placeholder Image">
+    </div>
+
+    <script>
+        function showImage() {
+            var img = document.getElementById('myImage');
+            if (img.style.display === 'none') {
+                img.style.display = 'block';  // Show the image
+            } else {
+                img.style.display = 'none';  // Hide the image (toggle)
+            }
+        }
+    </script>
+
+</body>
+</html>
+
